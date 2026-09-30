@@ -57,7 +57,7 @@
         }
 
         main {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             padding: 30px 20px;
         }
@@ -80,10 +80,81 @@
             margin: 20px auto;
         }
 
+        .collections {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .collection {
+            padding: 45px 20px;
+            border: 1px solid #444444;
+            background: #171717;
+        }
+
+        .collection h3 {
+            font-size: 24px;
+            letter-spacing: 4px;
+            font-weight: normal;
+            margin: 0 0 15px;
+        }
+
+        .collection p {
+            font-size: 15px;
+        }
+
+        .gold h3 {
+            color: #d4af37;
+        }
+
+        .silver h3 {
+            color: #c0c0c0;
+        }
+
+        .bronze h3 {
+            color: #cd7f32;
+        }
+
+        .platinum h3 {
+            color: #d9d9d9;
+        }
+
+        .one-of-one {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 45px 20px;
+            border: 1px solid #555555;
+            background: #151515;
+        }
+
+        .one-of-one h3 {
+            font-size: 24px;
+            letter-spacing: 4px;
+            font-weight: normal;
+        }
+
         footer {
             padding: 40px 20px;
             font-size: 14px;
             letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 42px;
+                letter-spacing: 6px;
+            }
+
+            .collections {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 15px;
+            }
         }
     </style>
 </head>
@@ -121,9 +192,42 @@
 
         <section id="art">
             <h2>ART</h2>
+
             <p>
-                Original artwork and creative pieces by Cally.
+                Original creative works by Cally.
             </p>
+
+            <div class="collections">
+
+                <div class="collection gold">
+                    <h3>GOLD</h3>
+                    <p>Gold collection works.</p>
+                </div>
+
+                <div class="collection silver">
+                    <h3>SILVER</h3>
+                    <p>Silver collection works.</p>
+                </div>
+
+                <div class="collection bronze">
+                    <h3>BRONZE</h3>
+                    <p>Bronze collection works.</p>
+                </div>
+
+                <div class="collection platinum">
+                    <h3>PLATINUM</h3>
+                    <p>A very limited collection.</p>
+                </div>
+
+            </div>
+
+            <div class="one-of-one">
+                <h3>ONE OF ONE</h3>
+                <p>
+                    Unique works created as singular pieces.
+                </p>
+            </div>
+
         </section>
 
         <section id="custom">
