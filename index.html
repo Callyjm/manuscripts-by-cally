@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MELLOWAY</title>
     <meta name="description" content="MELLOWAY — original art and exclusive creative works.">
+
     <style>
         * {
             box-sizing: border-box;
@@ -18,38 +20,43 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background:
-                linear-gradient(
-                    to bottom,
-                    #fffdfb 0%,
-                    #f8f5f1 35%,
-                    #f0edf0 60%,
-                    #faf7f4 82%,
-                    #fffdfb 100%
-                );
             color: #514147;
             font-family: Georgia, serif;
             text-align: center;
+            background: #f8f5f1;
         }
 
-        /* Original MELLOWAY image with big M at the top */
+        /* SMALL M PEARL PATTERN BELOW THE LOGO */
+        .pearl-background {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background-color: #f8f5f1;
+            background-image:
+                url('./file_0000000092f082089bd7a86778879bd3.png');
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* BIG MELLOWAY LOGO AT THE TOP */
         header {
             width: 100%;
             height: 55vh;
-            min-height: 360px;
-            background-image: url('./file_0000000092f082089bd7a86778879bd3.png');
+            min-height: 320px;
+            background-image:
+                url('./file_00000000988481fa9fe31c67b67da2cb.jpg');
             background-position: center top;
-            background-size: auto 100%;
+            background-size: contain;
             background-repeat: no-repeat;
         }
 
         main {
             width: 100%;
             padding: 10px 20px 70px;
-            margin: 0 auto;
         }
 
-        /* Collection links styling */
+        /* COLLECTION LINKS */
         .collections {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -65,7 +72,7 @@
             justify-content: center;
             min-height: 105px;
             padding: 24px 12px;
-            background: rgba(255, 253, 250, 0.38);
+            background: rgba(255, 253, 250, 0.35);
             border: 1px solid rgba(255, 255, 255, 0.72);
             border-radius: 3px;
             box-shadow:
@@ -80,11 +87,9 @@
         }
 
         .collection:hover {
-            background: rgba(255, 253, 250, 0.72);
-            border-color: rgba(128, 0, 32, 0.20);
-            box-shadow:
-                0 6px 20px rgba(83, 60, 65, 0.07),
-                inset 0 1px 2px rgba(255, 255, 255, 0.8);
+            background: rgba(255, 253, 250, 0.7);
+            border-color: rgba(128, 0, 32, 0.2);
+            box-shadow: 0 6px 20px rgba(83, 60, 65, 0.07);
             transform: translateY(-2px);
         }
 
@@ -96,7 +101,6 @@
             line-height: 1.4;
         }
 
-        /* Collection colors */
         .gold h2 {
             color: #a78320;
         }
@@ -118,7 +122,6 @@
             letter-spacing: 2px;
         }
 
-        /* Center the fifth collection */
         .one-of-one {
             grid-column: 1 / -1;
             width: calc(50% - 9px);
@@ -126,12 +129,11 @@
             min-height: 90px;
         }
 
-        /* Mobile layout */
         @media (max-width: 600px) {
             header {
                 height: 55vh;
                 min-height: 300px;
-                background-size: auto 55vh;
+                background-size: contain;
                 background-position: center top;
             }
 
@@ -175,25 +177,36 @@
 </head>
 
 <body>
-    <header aria-label="MELLOWAY brand image"></header>
+
+    <div class="pearl-background" aria-hidden="true"></div>
+
+    <header aria-label="MELLOWAY brand logo"></header>
+
     <main>
         <div class="collections">
+
             <a href="gold.html" class="collection gold">
                 <h2>GOLD</h2>
             </a>
+
             <a href="silver.html" class="collection silver">
                 <h2>SILVER</h2>
             </a>
+
             <a href="bronze.html" class="collection bronze">
                 <h2>BRONZE</h2>
             </a>
+
             <a href="platinum.html" class="collection platinum">
                 <h2>PLATINUM</h2>
             </a>
+
             <a href="one-of-one.html" class="collection one-of-one">
                 <h2>ONE OF ONE</h2>
             </a>
+
         </div>
     </main>
+
 </body>
 </html>
