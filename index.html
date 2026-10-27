@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MELLOWAY — Cally Jane Melloway</title>
+
+    <meta name="description" content="MELLOWAY — original art, manuscripts and exclusive creative works by Cally Jane Melloway.">
 
     <style>
         * {
@@ -17,35 +18,40 @@
         }
 
         body {
-            background-color: #f8f6f3;
-            background-image:
-                linear-gradient(
-                    rgba(255, 255, 255, 0.10),
-                    rgba(255, 255, 255, 0.10)
-                ),
-                url('./file_0000000092f082089bd7a86778879bd3.png');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #292326;
-            font-family: Georgia, serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             min-height: 100vh;
+
+            background-color: #f8f6f3;
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.08),
+                    rgba(255, 255, 255, 0.08)
+                ),
+                url('./file_0000000092f082089bd7a86778879bd3.png');
+
+            background-size: 100% auto;
+            background-position: center top;
+            background-repeat: repeat-y;
+            background-attachment: scroll;
+
+            color: #514147;
+            font-family: Georgia, serif;
+            text-align: center;
         }
 
         header {
-            padding: 70px 20px 40px;
+            padding: 75px 20px 35px;
         }
 
         h1 {
-            font-size: 64px;
+            font-size: 58px;
             letter-spacing: 10px;
             margin: 0;
             font-weight: bold;
             color: #f5f0eb;
+
             text-shadow:
                 0 1px 0 #ffffff,
                 0 2px 1px #b9aaa1,
@@ -62,8 +68,6 @@
         nav {
             margin: 30px 0;
             padding: 20px;
-            border-top: 1px solid rgba(128, 0, 32, 0.30);
-            border-bottom: 1px solid rgba(128, 0, 32, 0.30);
         }
 
         nav a {
@@ -72,6 +76,7 @@
             margin: 0 15px;
             letter-spacing: 2px;
             font-size: 13px;
+            transition: color 0.3s;
         }
 
         nav a:hover {
@@ -79,15 +84,8 @@
             text-decoration: underline;
         }
 
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-
         section {
             padding: 70px 20px;
-            border-bottom: 1px solid rgba(128, 0, 32, 0.18);
         }
 
         h2 {
@@ -112,28 +110,28 @@
             gap: 20px;
             max-width: 800px;
             margin: 40px auto;
+            padding: 0 15px;
         }
 
         .collection {
             display: block;
             padding: 45px 20px;
-            border: 1px solid rgba(128, 0, 32, 0.28);
-            background: rgba(255, 252, 249, 0.78);
+            border: 1px solid rgba(128, 0, 32, 0.22);
+            background: rgba(255, 252, 249, 0.72);
             text-decoration: none;
             transition: background 0.3s, transform 0.3s;
             box-shadow: 0 5px 20px rgba(75, 48, 55, 0.06);
         }
 
         .collection:hover {
-            background: rgba(255, 255, 255, 0.96);
+            background: rgba(255, 255, 255, 0.94);
             transform: translateY(-3px);
         }
 
         .collection h3 {
-            font-size: 24px;
-            letter-spacing: 4px;
-            font-weight: normal;
-            margin: 0 0 15px;
+            font-size: 23px;
+            letter-spacing: 3px;
+            margin-top: 0;
         }
 
         .collection p {
@@ -169,10 +167,6 @@
         }
 
         @media (max-width: 600px) {
-            body {
-                background-attachment: scroll;
-            }
-
             header {
                 padding: 55px 15px 30px;
             }
@@ -185,10 +179,6 @@
             .subtitle {
                 font-size: 14px;
                 letter-spacing: 3px;
-            }
-
-            .collections {
-                grid-template-columns: 1fr;
             }
 
             nav a {
@@ -204,6 +194,24 @@
                 font-size: 25px;
                 letter-spacing: 3px;
             }
+
+            .collections {
+                gap: 12px;
+                padding: 0 8px;
+            }
+
+            .collection {
+                padding: 30px 10px;
+            }
+
+            .collection h3 {
+                font-size: 18px;
+                letter-spacing: 1px;
+            }
+
+            .collection p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -216,76 +224,71 @@
     </header>
 
     <nav>
-        <a href="#about">ABOUT</a>
         <a href="#manuscripts">MANUSCRIPTS</a>
         <a href="#art">ART</a>
-        <a href="#custom">CUSTOM CREATIONS</a>
+        <a href="#custom-creations">CUSTOM CREATIONS</a>
     </nav>
 
-    <main>
+    <section id="manuscripts">
+        <h2>MANUSCRIPTS</h2>
+        <p>
+            Original writing and creative works, thoughtfully created
+            to share stories, ideas and imagination.
+        </p>
+    </section>
 
-        <section id="about">
-            <h2>WELCOME TO MELLOWAY</h2>
-            <p>
-                A creative space for original manuscripts,
-                artwork, ideas and custom creations by Cally.
-            </p>
-        </section>
+    <section id="art">
+        <h2>ART</h2>
+        <p>
+            Original abstract artworks inspired by city life, movement,
+            rain, atmosphere and the feelings found within everyday moments.
+        </p>
 
-        <section id="manuscripts">
-            <h2>MANUSCRIPTS</h2>
-            <p>
-                Original manuscripts and creative writing by Cally.
-            </p>
-        </section>
+        <div class="collections">
 
-        <section id="art">
-            <h2>ART</h2>
-            <p>
-                Original creative works by Cally.
-            </p>
+            <a href="gold.html" class="collection gold">
+                <h3>GOLD</h3>
+                <p>Original works with golden character.</p>
+            </a>
 
-            <div class="collections">
+            <a href="silver.html" class="collection silver">
+                <h3>SILVER</h3>
+                <p>Contemporary works with a silver finish.</p>
+            </a>
 
-                <a href="gold.html" class="collection gold">
-                    <h3>GOLD</h3>
-                    <p>Gold collection works.</p>
-                </a>
+            <a href="bronze.html" class="collection bronze">
+                <h3>BRONZE</h3>
+                <p>Distinctive works with warm metallic tones.</p>
+            </a>
 
-                <a href="silver.html" class="collection silver">
-                    <h3>SILVER</h3>
-                    <p>Silver collection works.</p>
-                </a>
+            <a href="platinum.html" class="collection platinum">
+                <h3>PLATINUM</h3>
+                <p>Selected works in an exclusive collection.</p>
+            </a>
 
-                <a href="bronze.html" class="collection bronze">
-                    <h3>BRONZE</h3>
-                    <p>Bronze collection works.</p>
-                </a>
+            <a href="one-of-one.html" class="collection one-of-one">
+                <h3>ONE OF ONE</h3>
+                <p>Unique creations. One original. One of one.</p>
+            </a>
 
-                <a href="platinum.html" class="collection platinum">
-                    <h3>PLATINUM</h3>
-                    <p>A very limited collection.</p>
-                </a>
+        </div>
+    </section>
 
-                <a href="one-of-one.html" class="collection one-of-one">
-                    <h3>ONE OF ONE</h3>
-                    <p>Unique singular works.</p>
-                </a>
-
-            </div>
-        </section>
-
-        <section id="custom">
-            <h2>CUSTOM CREATIONS</h2>
-            <p>
-                Unique creative works made by Cally.
-            </p>
-        </section>
-
-    </main>
+    <section id="custom-creations">
+        <h2>CUSTOM CREATIONS</h2>
+        <p>
+            A space for individual creative ideas and original pieces
+            made with a personal touch.
+        </p>
+        <p>
+            For enquiries about available artwork and custom creations,
+            please get in touch.
+        </p>
+    </section>
 
     <footer>
         MELLOWAY
+        <p>Originality. Individuality. One of One.</p>
     </footer>
 
 </body>
