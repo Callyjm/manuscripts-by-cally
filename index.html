@@ -20,33 +20,27 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background-color: #f8f5f1;
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fffdfb 0%,
+                    #f8f5f1 35%,
+                    #f0edf0 60%,
+                    #faf7f4 82%,
+                    #fffdfb 100%
+                );
             color: #514147;
             font-family: Georgia, serif;
             text-align: center;
-            position: relative;
-            isolation: isolate;
         }
 
-        /* Continuous glossy pearl background */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            background-image: url('./melloway-small-m-pearl.png');
-            background-position: center top;
-            background-size: 100% auto;
-            background-repeat: repeat-y;
-            pointer-events: none;
-        }
-
-        /* Original MELLOWAY design at the top */
+        /* Original MELLOWAY image at the top */
         header {
             width: 100%;
-            min-height: 55vh;
-            padding: 0;
-            background-image: url('./file_0000000092f082089bd7a86778879bd3.png');
+            height: 55vh;
+            min-height: 360px;
+            background-image:
+                url('./file_0000000092f082089bd7a86778879bd3.png');
             background-position: center top;
             background-size: 100% auto;
             background-repeat: no-repeat;
@@ -55,9 +49,10 @@
         main {
             width: 100%;
             padding: 10px 20px 70px;
-            margin-top: 0;
+            margin: 0 auto;
         }
 
+        /* Collection links */
         .collections {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -73,13 +68,17 @@
             justify-content: center;
             min-height: 105px;
             padding: 24px 12px;
-            background: rgba(255, 253, 250, 0.28);
+
+            background: rgba(255, 253, 250, 0.38);
             border: 1px solid rgba(255, 255, 255, 0.72);
             border-radius: 3px;
+
             box-shadow:
                 0 4px 16px rgba(83, 60, 65, 0.035),
                 inset 0 1px 1px rgba(255, 255, 255, 0.55);
+
             text-decoration: none;
+
             transition:
                 background 0.35s ease,
                 border-color 0.35s ease,
@@ -88,11 +87,13 @@
         }
 
         .collection:hover {
-            background: rgba(255, 253, 250, 0.62);
+            background: rgba(255, 253, 250, 0.72);
             border-color: rgba(128, 0, 32, 0.20);
+
             box-shadow:
                 0 6px 20px rgba(83, 60, 65, 0.07),
                 inset 0 1px 2px rgba(255, 255, 255, 0.8);
+
             transform: translateY(-2px);
         }
 
@@ -104,6 +105,7 @@
             line-height: 1.4;
         }
 
+        /* Collection colours */
         .gold h2 {
             color: #a78320;
         }
@@ -125,6 +127,7 @@
             letter-spacing: 2px;
         }
 
+        /* Centre the fifth collection */
         .one-of-one {
             grid-column: 1 / -1;
             width: calc(50% - 9px);
@@ -132,15 +135,13 @@
             min-height: 90px;
         }
 
+        /* Mobile styling */
         @media (max-width: 600px) {
             header {
-                min-height: 55vh;
-                background-size: auto 55vh;
-                background-position: center top;
-            }
-
-            body::before {
+                height: 55vh;
+                min-height: 300px;
                 background-size: 100% auto;
+                background-position: center top;
             }
 
             main {
