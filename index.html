@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MELLOWAY — Cally Jane Melloway</title>
-
-    <meta name="description" content="MELLOWAY — original art, manuscripts and exclusive creative works by Cally Jane Melloway.">
+    <title>MELLOWAY</title>
+    <meta name="description" content="MELLOWAY — original art and exclusive creative works.">
 
     <style>
         * {
@@ -22,12 +21,11 @@
             padding: 0;
             min-height: 100vh;
 
-            background-color: #f8f6f3;
-
+            background-color: #f8f5f1;
             background-image:
                 linear-gradient(
-                    rgba(255, 255, 255, 0.08),
-                    rgba(255, 255, 255, 0.08)
+                    rgba(255, 250, 246, 0.04),
+                    rgba(255, 250, 246, 0.04)
                 ),
                 url('./file_0000000092f082089bd7a86778879bd3.png');
 
@@ -41,176 +39,143 @@
             text-align: center;
         }
 
+        /* Minimal, open space above the collections */
         header {
-            padding: 75px 20px 35px;
+            min-height: 100px;
+            padding: 20px 10px;
         }
 
-        h1 {
-            font-size: 58px;
-            letter-spacing: 10px;
-            margin: 0;
-            font-weight: bold;
-            color: #f5f0eb;
-
-            text-shadow:
-                0 1px 0 #ffffff,
-                0 2px 1px #b9aaa1,
-                0 4px 5px rgba(70, 48, 48, 0.35);
+        main {
+            width: 100%;
+            padding: 10px 20px 70px;
         }
 
-        .subtitle {
-            font-size: 20px;
-            letter-spacing: 4px;
-            margin-top: 15px;
-            color: #514147;
-        }
-
-        nav {
-            margin: 30px 0;
-            padding: 20px;
-        }
-
-        nav a {
-            color: #514147;
-            text-decoration: none;
-            margin: 0 15px;
-            letter-spacing: 2px;
-            font-size: 13px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #800020;
-            text-decoration: underline;
-        }
-
-        section {
-            padding: 70px 20px;
-        }
-
-        h2 {
-            font-size: 32px;
-            font-weight: normal;
-            letter-spacing: 4px;
-            color: #514147;
-            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 20px auto;
-            color: #514147;
-        }
-
+        /* Delicate collection layout */
         .collections {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 15px;
+            gap: 18px;
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto;
         }
 
+        /* Transparent pearl-glass effect */
         .collection {
-            display: block;
-            padding: 45px 20px;
-            border: 1px solid rgba(128, 0, 32, 0.22);
-            background: rgba(255, 252, 249, 0.72);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 105px;
+            padding: 24px 12px;
+
+            background: rgba(255, 253, 250, 0.28);
+            border: 1px solid rgba(255, 255, 255, 0.72);
+            border-radius: 3px;
+
+            box-shadow:
+                0 4px 16px rgba(83, 60, 65, 0.035),
+                inset 0 1px 1px rgba(255, 255, 255, 0.55);
+
             text-decoration: none;
-            transition: background 0.3s, transform 0.3s;
-            box-shadow: 0 5px 20px rgba(75, 48, 55, 0.06);
+
+            transition:
+                background 0.35s ease,
+                border-color 0.35s ease,
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
         }
 
         .collection:hover {
-            background: rgba(255, 255, 255, 0.94);
-            transform: translateY(-3px);
+            background: rgba(255, 253, 250, 0.62);
+            border-color: rgba(128, 0, 32, 0.20);
+
+            box-shadow:
+                0 6px 20px rgba(83, 60, 65, 0.07),
+                inset 0 1px 2px rgba(255, 255, 255, 0.8);
+
+            transform: translateY(-2px);
         }
 
-        .collection h3 {
-            font-size: 23px;
+        .collection h2 {
+            margin: 0;
+            font-size: 21px;
+            font-weight: normal;
             letter-spacing: 3px;
-            margin-top: 0;
+            line-height: 1.4;
         }
 
-        .collection p {
-            font-size: 15px;
-            color: #514147;
-        }
-
-        .gold h3 {
+        /* Refined luxury collection colours */
+        .gold h2 {
             color: #a78320;
         }
 
-        .silver h3 {
+        .silver h2 {
             color: #777777;
         }
 
-        .bronze h3 {
+        .bronze h2 {
             color: #a65e2b;
         }
 
-        .platinum h3 {
+        .platinum h2 {
             color: #77716d;
         }
 
-        .one-of-one h3 {
+        .one-of-one h2 {
             color: #800020;
+            letter-spacing: 2px;
         }
 
-        footer {
-            padding: 40px 20px;
-            font-size: 14px;
-            letter-spacing: 3px;
-            color: #514147;
+        /* Centre the fifth collection beneath the others */
+        .one-of-one {
+            grid-column: 1 / -1;
+            width: calc(50% - 9px);
+            justify-self: center;
+            min-height: 90px;
         }
 
+        /* Small-screen refinements */
         @media (max-width: 600px) {
             header {
-                padding: 55px 15px 30px;
+                min-height: 75px;
+                padding: 15px 8px;
             }
 
-            h1 {
-                font-size: 38px;
-                letter-spacing: 5px;
-            }
-
-            .subtitle {
-                font-size: 14px;
-                letter-spacing: 3px;
-            }
-
-            nav a {
-                display: block;
-                margin: 18px 0;
-            }
-
-            section {
-                padding: 50px 12px;
-            }
-
-            h2 {
-                font-size: 25px;
-                letter-spacing: 3px;
+            main {
+                padding: 10px 14px 45px;
             }
 
             .collections {
                 gap: 12px;
-                padding: 0 8px;
             }
 
             .collection {
-                padding: 30px 10px;
+                min-height: 88px;
+                padding: 18px 8px;
             }
 
-            .collection h3 {
-                font-size: 18px;
-                letter-spacing: 1px;
+            .collection h2 {
+                font-size: 16px;
+                letter-spacing: 1.5px;
             }
 
-            .collection p {
-                font-size: 14px;
+            .one-of-one {
+                min-height: 78px;
+            }
+
+            .one-of-one h2 {
+                letter-spacing: 1.5px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .collection {
+                transition: none;
             }
         }
     </style>
@@ -219,77 +184,34 @@
 <body>
 
     <header>
-        <h1>MELLOWAY</h1>
-        <div class="subtitle">CALLY JANE MELLOWAY</div>
+        <!-- Minimal luxury homepage -->
     </header>
 
-    <nav>
-        <a href="#manuscripts">MANUSCRIPTS</a>
-        <a href="#art">ART</a>
-        <a href="#custom-creations">CUSTOM CREATIONS</a>
-    </nav>
-
-    <section id="manuscripts">
-        <h2>MANUSCRIPTS</h2>
-        <p>
-            Original writing and creative works, thoughtfully created
-            to share stories, ideas and imagination.
-        </p>
-    </section>
-
-    <section id="art">
-        <h2>ART</h2>
-        <p>
-            Original abstract artworks inspired by city life, movement,
-            rain, atmosphere and the feelings found within everyday moments.
-        </p>
-
+    <main>
         <div class="collections">
 
             <a href="gold.html" class="collection gold">
-                <h3>GOLD</h3>
-                <p>Original works with golden character.</p>
+                <h2>GOLD</h2>
             </a>
 
             <a href="silver.html" class="collection silver">
-                <h3>SILVER</h3>
-                <p>Contemporary works with a silver finish.</p>
+                <h2>SILVER</h2>
             </a>
 
             <a href="bronze.html" class="collection bronze">
-                <h3>BRONZE</h3>
-                <p>Distinctive works with warm metallic tones.</p>
+                <h2>BRONZE</h2>
             </a>
 
             <a href="platinum.html" class="collection platinum">
-                <h3>PLATINUM</h3>
-                <p>Selected works in an exclusive collection.</p>
+                <h2>PLATINUM</h2>
             </a>
 
             <a href="one-of-one.html" class="collection one-of-one">
-                <h3>ONE OF ONE</h3>
-                <p>Unique creations. One original. One of one.</p>
+                <h2>ONE OF ONE</h2>
             </a>
 
         </div>
-    </section>
-
-    <section id="custom-creations">
-        <h2>CUSTOM CREATIONS</h2>
-        <p>
-            A space for individual creative ideas and original pieces
-            made with a personal touch.
-        </p>
-        <p>
-            For enquiries about available artwork and custom creations,
-            please get in touch.
-        </p>
-    </section>
-
-    <footer>
-        MELLOWAY
-        <p>Originality. Individuality. One of One.</p>
-    </footer>
+    </main>
 
 </body>
 </html>
