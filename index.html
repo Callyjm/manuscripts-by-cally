@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>MELLOWAY</title>
     <meta name="description" content="MELLOWAY — original art and exclusive creative works.">
-
     <style>
         * {
             box-sizing: border-box;
@@ -34,15 +32,14 @@
             text-align: center;
         }
 
-        /* Original MELLOWAY image at the top */
+        /* Original MELLOWAY image with big M at the top */
         header {
             width: 100%;
             height: 55vh;
             min-height: 360px;
-            background-image:
-                url('./file_0000000092f082089bd7a86778879bd3.png');
+            background-image: url('./file_0000000092f082089bd7a86778879bd3.png');
             background-position: center top;
-            background-size: 100% auto;
+            background-size: auto 100%;
             background-repeat: no-repeat;
         }
 
@@ -52,7 +49,7 @@
             margin: 0 auto;
         }
 
-        /* Collection links */
+        /* Collection links styling */
         .collections {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -68,17 +65,13 @@
             justify-content: center;
             min-height: 105px;
             padding: 24px 12px;
-
             background: rgba(255, 253, 250, 0.38);
             border: 1px solid rgba(255, 255, 255, 0.72);
             border-radius: 3px;
-
             box-shadow:
                 0 4px 16px rgba(83, 60, 65, 0.035),
                 inset 0 1px 1px rgba(255, 255, 255, 0.55);
-
             text-decoration: none;
-
             transition:
                 background 0.35s ease,
                 border-color 0.35s ease,
@@ -89,11 +82,9 @@
         .collection:hover {
             background: rgba(255, 253, 250, 0.72);
             border-color: rgba(128, 0, 32, 0.20);
-
             box-shadow:
                 0 6px 20px rgba(83, 60, 65, 0.07),
                 inset 0 1px 2px rgba(255, 255, 255, 0.8);
-
             transform: translateY(-2px);
         }
 
@@ -105,7 +96,7 @@
             line-height: 1.4;
         }
 
-        /* Collection colours */
+        /* Collection colors */
         .gold h2 {
             color: #a78320;
         }
@@ -127,7 +118,7 @@
             letter-spacing: 2px;
         }
 
-        /* Centre the fifth collection */
+        /* Center the fifth collection */
         .one-of-one {
             grid-column: 1 / -1;
             width: calc(50% - 9px);
@@ -135,12 +126,12 @@
             min-height: 90px;
         }
 
-        /* Mobile styling */
+        /* Mobile layout */
         @media (max-width: 600px) {
             header {
                 height: 55vh;
                 min-height: 300px;
-                background-size: 100% auto;
+                background-size: auto 55vh;
                 background-position: center top;
             }
 
@@ -184,34 +175,25 @@
 </head>
 
 <body>
-
     <header aria-label="MELLOWAY brand image"></header>
-
     <main>
         <div class="collections">
-
             <a href="gold.html" class="collection gold">
                 <h2>GOLD</h2>
             </a>
-
             <a href="silver.html" class="collection silver">
                 <h2>SILVER</h2>
             </a>
-
             <a href="bronze.html" class="collection bronze">
                 <h2>BRONZE</h2>
             </a>
-
             <a href="platinum.html" class="collection platinum">
                 <h2>PLATINUM</h2>
             </a>
-
             <a href="one-of-one.html" class="collection one-of-one">
                 <h2>ONE OF ONE</h2>
             </a>
-
         </div>
     </main>
-
 </body>
 </html>
