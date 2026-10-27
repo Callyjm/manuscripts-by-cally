@@ -39,18 +39,19 @@
             text-align: center;
         }
 
-        /* Minimal, open space above the collections */
+        /* Open space for the large MELLOWAY brand mark */
         header {
-            min-height: 100px;
-            padding: 20px 10px;
+            min-height: 55vh;
+            padding: 15px 8px;
         }
 
         main {
             width: 100%;
             padding: 10px 20px 70px;
+            margin-top: 0;
         }
 
-        /* Delicate collection layout */
+        /* Delicate transparent collection links */
         .collections {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -60,7 +61,6 @@
             margin: 0 auto;
         }
 
-        /* Transparent pearl-glass effect */
         .collection {
             display: flex;
             align-items: center;
@@ -105,7 +105,7 @@
             line-height: 1.4;
         }
 
-        /* Refined luxury collection colours */
+        /* Collection colours */
         .gold h2 {
             color: #a78320;
         }
@@ -127,7 +127,7 @@
             letter-spacing: 2px;
         }
 
-        /* Centre the fifth collection beneath the others */
+        /* Centre the fifth collection */
         .one-of-one {
             grid-column: 1 / -1;
             width: calc(50% - 9px);
@@ -135,10 +135,10 @@
             min-height: 90px;
         }
 
-        /* Small-screen refinements */
+        /* Mobile layout */
         @media (max-width: 600px) {
             header {
-                min-height: 75px;
+                min-height: 55vh;
                 padding: 15px 8px;
             }
 
@@ -184,7 +184,7 @@
 <body>
 
     <header>
-        <!-- Minimal luxury homepage -->
+        <!-- Clear space for the MELLOWAY brand image -->
     </header>
 
     <main>
