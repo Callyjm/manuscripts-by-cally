@@ -1,212 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MELLOWAY</title>
-    <meta name="description" content="MELLOWAY — original art and exclusive creative works.">
+<title>MELLOWAY</title>
+<meta name="description" content="MELLOWAY — original art and exclusive creative works.">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            color: #e1dce8;
-            font-family: Georgia, serif;
-            text-align: center;
-            background: #07152e;
-        }
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    text-align: center;
+    color: #e5e4ec;
+    background-color: #07152e;
+    background-image: url('./melloway-blue-pattern.jpg');
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
 
-        /* CONTINUOUS MIDNIGHT BLUE PEARL BACKGROUND */
-        .pearl-background {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background-color: #07152e;
-            background-image: url('./melloway-midnight-blue.png');
-            background-position: center top;
-            background-size: 100% auto;
-            background-repeat: repeat-y;
-            pointer-events: none;
-        }
+/* ORIGINAL MELLOWAY HEADER */
+header {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    line-height: 0;
+}
 
-        /* MAIN MELLOWAY BRAND IMAGE */
-        header {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            height: 65vh;
-            min-height: 360px;
-            background-image: url('./melloway-midnight-blue.png');
-            background-position: center top;
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-        }
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
-        /* COLLECTION AREA */
-        main {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            padding: 10px 20px 70px;
-        }
+/* COLLECTIONS */
+main {
+    width: 100%;
+    padding: 25px 20px 70px;
+}
 
-        /* COLLECTION LINKS */
-        .collections {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-            width: 100%;
-            max-width: 680px;
-            margin: 0 auto;
-        }
+.collections {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+}
 
-        .collection {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 105px;
-            padding: 24px 12px;
-            background: rgba(9, 24, 51, 0.48);
-            border: none;
-            border-radius: 3px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-            text-decoration: none;
-            transition:
-                background 0.35s ease,
-                transform 0.35s ease;
-        }
+.collection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 105px;
+    padding: 24px 12px;
+    background: rgba(5, 18, 43, 0.55);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
 
-        .collection:hover {
-            background: rgba(20, 43, 78, 0.72);
-            transform: translateY(-2px);
-        }
+.collection:hover {
+    background: rgba(30, 57, 95, 0.75);
+    transform: translateY(-2px);
+}
 
-        .collection h2 {
-            margin: 0;
-            font-size: 21px;
-            font-weight: normal;
-            letter-spacing: 3px;
-            line-height: 1.4;
-        }
+.collection h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
 
-        .gold h2 {
-            color: #d4af37;
-        }
+.gold h2 {
+    color: #d4af37;
+}
 
-        .silver h2 {
-            color: #c0c0c0;
-        }
+.silver h2 {
+    color: #c0c0c0;
+}
 
-        .bronze h2 {
-            color: #cd7f32;
-        }
+.bronze h2 {
+    color: #cd7f32;
+}
 
-        .platinum h2 {
-            color: #e1e5ec;
-        }
+.platinum h2 {
+    color: #e1e5ec;
+}
 
-        .one-of-one h2 {
-            color: #b66a83;
-            letter-spacing: 2px;
-        }
+.one-of-one h2 {
+    color: #b66a83;
+    letter-spacing: 2px;
+}
 
-        .one-of-one {
-            grid-column: 1 / -1;
-            width: calc(50% - 9px);
-            justify-self: center;
-            min-height: 90px;
-        }
+.one-of-one {
+    grid-column: 1 / -1;
+    width: calc(50% - 9px);
+    justify-self: center;
+    min-height: 90px;
+}
 
-        /* MOBILE DISPLAY */
-        @media (max-width: 600px) {
-            header {
-                height: 65vh;
-                min-height: 320px;
-                background-size: auto 100%;
-                background-position: center top;
-            }
+/* MOBILE */
+@media (max-width: 600px) {
+    main {
+        padding: 18px 14px 45px;
+    }
 
-            main {
-                padding: 10px 14px 45px;
-            }
+    .collections {
+        gap: 12px;
+    }
 
-            .collections {
-                gap: 12px;
-            }
+    .collection {
+        min-height: 88px;
+        padding: 18px 8px;
+    }
 
-            .collection {
-                min-height: 88px;
-                padding: 18px 8px;
-            }
+    .collection h2 {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
 
-            .collection h2 {
-                font-size: 16px;
-                letter-spacing: 1.5px;
-            }
+    .one-of-one {
+        min-height: 78px;
+    }
+}
 
-            .one-of-one {
-                min-height: 78px;
-            }
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-            .one-of-one h2 {
-                letter-spacing: 1.5px;
-            }
-        }
-
-        /* ACCESSIBILITY */
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            .collection {
-                transition: none;
-            }
-        }
-    </style>
+    .collection {
+        transition: none;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="pearl-background" aria-hidden="true"></div>
+<header aria-label="MELLOWAY brand">
+    <img
+        src="./melloway-blue-header.jpg"
+        alt="MELLOWAY interlocking M X logo"
+    >
+</header>
 
-    <header aria-label="MELLOWAY brand logo"></header>
+<main>
+    <div class="collections">
 
-    <main>
-        <div class="collections">
+        <a href="gold.html" class="collection gold">
+            <h2>GOLD</h2>
+        </a>
 
-            <a href="gold.html" class="collection gold">
-                <h2>GOLD</h2>
-            </a>
+        <a href="silver.html" class="collection silver">
+            <h2>SILVER</h2>
+        </a>
 
-            <a href="silver.html" class="collection silver">
-                <h2>SILVER</h2>
-            </a>
+        <a href="bronze.html" class="collection bronze">
+            <h2>BRONZE</h2>
+        </a>
 
-            <a href="bronze.html" class="collection bronze">
-                <h2>BRONZE</h2>
-            </a>
+        <a href="platinum.html" class="collection platinum">
+            <h2>PLATINUM</h2>
+        </a>
 
-            <a href="platinum.html" class="collection platinum">
-                <h2>PLATINUM</h2>
-            </a>
+        <a href="one-of-one.html" class="collection one-of-one">
+            <h2>ONE OF ONE</h2>
+        </a>
 
-            <a href="one-of-one.html" class="collection one-of-one">
-                <h2>ONE OF ONE</h2>
-            </a>
-
-        </div>
-    </main>
+    </div>
+</main>
 
 </body>
 </html>
