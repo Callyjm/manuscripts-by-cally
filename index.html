@@ -27,23 +27,35 @@ body {
     color: #f5f5ff;
 }
 
-/* FULL OPENING BRANDING SCREEN */
+/* MAIN BRANDING AREA */
 .brand-hero {
     width: 100%;
-    min-height: 100vh;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 22px 12px 30px;
     background-color: #07152e;
-
-    /* PEARL M PATTERN CONTINUES THROUGH THE WHOLE HERO */
     background-image: url('./melloway-blue-pattern.jpg');
     background-position: center top;
     background-repeat: repeat;
     background-size: 280px auto;
+}
 
-    padding: 0 0 30px;
+/* BLACK DIAMOND BORDER */
+.diamond-frame {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #000;
+    background-image:
+        repeating-conic-gradient(
+            from 45deg,
+            #050505 0% 25%,
+            #d8d8df 25% 50%
+        );
+    background-size: 22px 22px;
+    border: 5px solid #000;
+    box-shadow:
+        0 0 0 3px #c0c0c0,
+        0 8px 25px rgba(0,0,0,0.8);
 }
 
 /* MAIN MELLOWAY LOGO */
@@ -84,7 +96,6 @@ body {
     justify-content: center;
     min-height: 75px;
     text-decoration: none;
-    background: transparent;
 }
 
 /* COLLECTION HEADINGS */
@@ -98,33 +109,30 @@ body {
     text-shadow: 0 2px 8px rgba(0,0,0,0.65);
 }
 
-/* ONE OF ONE DISPLAY */
+/* ONE OF ONE */
 .one-of-one-display {
     grid-column: 1 / -1;
     width: 100%;
     padding: 45px 10px 40px;
-    text-align: center;
 }
 
-/* THICK BLACK FRAME */
+/* BLACK FRAME AROUND DIGITAL LOGO */
 .logo-frame {
     display: inline-block;
     width: 100%;
     max-width: 450px;
     padding: 14px;
     margin: 25px auto;
-    background-color: #000000;
+    background: #000;
     border: 2px solid #c0c0c0;
     box-shadow: 0 8px 25px rgba(0,0,0,0.8);
 }
 
-/* LOGO INSIDE FRAME */
 .logo-frame img {
     display: block;
     width: 100%;
     height: auto;
     margin: 0;
-    border: none;
 }
 
 /* DESCRIPTION SPACE */
@@ -133,7 +141,6 @@ body {
     max-width: 680px;
     margin: 20px auto;
     padding: 20px 15px;
-    color: #f5f5ff;
     font-size: 16px;
     line-height: 1.8;
 }
@@ -142,12 +149,10 @@ body {
 .site-footer {
     width: 100%;
     padding: 35px 10px 25px;
-    text-align: center;
     color: #f5f5ff;
     font-size: 13px;
     letter-spacing: 1.5px;
     line-height: 2;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
 .site-footer .brand-name {
@@ -158,7 +163,14 @@ body {
 /* MOBILE DISPLAY */
 @media (max-width: 600px) {
     .brand-hero {
+        padding: 15px 9px 22px;
         background-size: 220px auto;
+    }
+
+    .diamond-frame {
+        padding: 9px;
+        border-width: 4px;
+        background-size: 16px 16px;
     }
 
     .collection-section {
@@ -180,18 +192,22 @@ body {
 
 <body>
 
-<!-- FIRST SCREEN: MELLOWAY BRANDING AND PEARL M PATTERN -->
+<!-- MELLOWAY BRANDING -->
 <section class="brand-hero">
 
-    <header class="header-logo">
-        <img
-            src="./file_000000003744820bb906eade10d0589d.png"
-            alt="MELLOWAY Main Logo">
-    </header>
+    <div class="diamond-frame">
+
+        <header class="header-logo">
+            <img
+                src="./file_000000003744820bb906eade10d0589d.png"
+                alt="MELLOWAY Main Logo">
+        </header>
+
+    </div>
 
 </section>
 
-<!-- SECOND SECTION: COLLECTIONS -->
+<!-- COLLECTIONS -->
 <section class="collection-section">
 
     <main class="collections">
@@ -232,7 +248,7 @@ body {
         <!-- Your MELLOWAY description will go here -->
     </section>
 
-    <!-- COPYRIGHT FOOTER -->
+    <!-- COPYRIGHT -->
     <footer class="site-footer">
         <div class="brand-name">MELLOWAY™</div>
         <div>© 2026 Cally Jane Melloway. All rights reserved.</div>
