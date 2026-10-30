@@ -1,3 +1,4 @@
+Writing
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,23 +19,23 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
     min-height: 100vh;
     font-family: Georgia, serif;
     text-align: center;
     color: #e5e4ec;
     background-color: #07152e;
-    background-image: url('./melloway-blue-pattern.jpg');
+    background-image: url('./melloway-blue-pattern.jpg?v=2');
     background-position: center top;
     background-size: 100% auto;
     background-repeat: repeat-y;
 }
 
-/* ORIGINAL MELLOWAY HEADER */
+/* MELLOWAY ORIGINAL LARGE LOGO */
 header {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    line-height: 0;
 }
 
 header img {
@@ -45,6 +46,7 @@ header img {
 
 /* COLLECTIONS */
 main {
+    position: relative;
     width: 100%;
     padding: 25px 20px 70px;
 }
@@ -112,8 +114,12 @@ main {
     min-height: 90px;
 }
 
-/* MOBILE */
+/* MOBILE DISPLAY */
 @media (max-width: 600px) {
+    header img {
+        width: 100%;
+    }
+
     main {
         padding: 18px 14px 45px;
     }
@@ -137,6 +143,7 @@ main {
     }
 }
 
+/* ACCESSIBILITY */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -151,10 +158,10 @@ main {
 
 <body>
 
-<header aria-label="MELLOWAY brand">
+<header aria-label="MELLOWAY brand logo">
     <img
-        src="./melloway-blue-header.jpg"
-        alt="MELLOWAY interlocking M X logo"
+        src="./melloway-blue-header.jpg?v=2"
+        alt="MELLOWAY original interlocking M X logo"
     >
 </header>
 
