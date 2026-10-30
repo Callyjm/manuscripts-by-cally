@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@ body {
 .brand-hero {
     width: 100%;
     min-height: 65vh;
-    padding: 30px 15px 45px;
+    padding: 30px 15px 100px;
     background-color: #07152e;
     background-image: url('./melloway-blue-pattern.jpg');
     background-position: center top;
@@ -52,10 +53,10 @@ body {
     margin: 0 auto;
 }
 
-/* SEPARATE ART COLLECTIONS */
+/* ART COLLECTIONS */
 .collection-section {
     width: 100%;
-    padding: 45px 20px 65px;
+    padding: 80px 20px 65px;
     background: #07152e;
 }
 
@@ -82,33 +83,22 @@ body {
 
 .collection:hover {
     transform: translateY(-3px);
-    text-shadow: 0 0 14px rgba(220, 225, 255, 0.65);
+    text-shadow: 0 0 14px rgba(240, 243, 255, 0.8);
 }
 
+/* BRIGHT PLATINUM-WHITE HEADINGS */
 .collection h2 {
     margin: 0;
     font-size: 21px;
     font-weight: normal;
     letter-spacing: 3px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    color: #f5f6ff;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.55),
+        0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
-.gold h2 {
-    color: #d4af37;
-}
-
-.silver h2 {
-    color: #e0e3ed;
-}
-
-.bronze h2 {
-    color: #cd7f32;
-}
-
-.platinum h2 {
-    color: #f0f1f5;
-}
-
+/* ONE OF ONE */
 .one-of-one {
     grid-column: 1 / -1;
 }
@@ -154,12 +144,12 @@ footer p {
 @media (max-width: 600px) {
     .brand-hero {
         min-height: 55vh;
-        padding: 22px 12px 35px;
+        padding: 22px 12px 75px;
         background-size: 220px auto;
     }
 
     .collection-section {
-        padding: 30px 14px 50px;
+        padding: 60px 14px 50px;
     }
 
     .collections {
