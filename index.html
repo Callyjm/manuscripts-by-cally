@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MELLOWAY</title>
+<meta name="description" content="MELLOWAY — original art and exclusive creative works.">
 
 <style>
 * {
@@ -12,25 +13,26 @@
 }
 
 html {
-    margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    background: #07152e;
+    min-height: 100vh;
     font-family: Georgia, serif;
-    text-align: center;
-    color: #f5f5ff;
+    background: #07152e;
+    color: #e5e4ec;
 }
 
-/* MAIN BRANDING AREA */
+/* TOP BRAND AREA */
 .brand-hero {
     width: 100%;
-    padding: 22px 12px 30px;
+    min-height: 65vh;
+    padding: 35px 18px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     background-color: #07152e;
     background-image: url('./melloway-blue-pattern.jpg');
     background-position: center top;
@@ -38,153 +40,50 @@ body {
     background-size: 280px auto;
 }
 
-/* BLACK DIAMOND BORDER */
-.diamond-frame {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 15px;
-    background-color: #000;
-    background-image:
-        repeating-conic-gradient(
-            from 45deg,
-            #050505 0% 25%,
-            #d8d8df 25% 50%
-        );
-    background-size: 22px 22px;
-    border: 5px solid #000;
-    box-shadow:
-        0 0 0 3px #c0c0c0,
-        0 8px 25px rgba(0,0,0,0.8);
-}
-
 /* MAIN MELLOWAY LOGO */
-.header-logo {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.header-logo img {
-    display: block;
+.logo-container {
     width: 100%;
     max-width: 1024px;
-    height: auto;
     margin: 0 auto;
+    text-align: center;
 }
 
-/* COLLECTION SECTION */
-.collection-section {
-    width: 100%;
-    background-color: #07152e;
-    padding: 65px 15px 35px;
-}
-
-/* COLLECTION GRID */
-.collections {
-    width: 100%;
-    max-width: 680px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 15px;
-}
-
-/* CLICKABLE COLLECTIONS */
-.collection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 75px;
-    text-decoration: none;
-}
-
-/* COLLECTION HEADINGS */
-.collection h2,
-.one-of-one-display h2 {
-    margin: 0;
-    color: #f5f5ff;
-    font-size: 21px;
-    font-weight: normal;
-    letter-spacing: 3px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.65);
-}
-
-/* ONE OF ONE */
-.one-of-one-display {
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 45px 10px 40px;
-}
-
-/* BLACK FRAME AROUND DIGITAL LOGO */
-.logo-frame {
-    display: inline-block;
-    width: 100%;
-    max-width: 450px;
-    padding: 14px;
-    margin: 25px auto;
-    background: #000;
-    border: 2px solid #c0c0c0;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
-}
-
-.logo-frame img {
+.logo-container img {
     display: block;
     width: 100%;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
 }
 
-/* DESCRIPTION SPACE */
-.description-area {
+/* CLEAN SEPARATE LOWER SECTION */
+.lower-section {
     width: 100%;
-    max-width: 680px;
-    margin: 20px auto;
-    padding: 20px 15px;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-/* COPYRIGHT FOOTER */
-.site-footer {
-    width: 100%;
-    padding: 35px 10px 25px;
-    color: #f5f5ff;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    line-height: 2;
-}
-
-.site-footer .brand-name {
-    font-size: 16px;
-    letter-spacing: 3px;
+    min-height: 35vh;
+    padding: 40px 20px;
+    background: #07152e;
 }
 
 /* MOBILE DISPLAY */
 @media (max-width: 600px) {
     .brand-hero {
-        padding: 15px 9px 22px;
+        min-height: 55vh;
+        padding: 22px 12px 35px;
         background-size: 220px auto;
     }
 
-    .diamond-frame {
-        padding: 9px;
-        border-width: 4px;
-        background-size: 16px 16px;
+    .logo-container {
+        width: 100%;
     }
 
-    .collection-section {
-        padding: 50px 12px 30px;
+    .lower-section {
+        min-height: 45vh;
     }
+}
 
-    .collection h2,
-    .one-of-one-display h2 {
-        font-size: 16px;
-        letter-spacing: 2px;
-    }
-
-    .logo-frame {
-        padding: 10px;
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }
 </style>
@@ -192,69 +91,17 @@ body {
 
 <body>
 
-<!-- MELLOWAY BRANDING -->
 <section class="brand-hero">
-
-    <div class="diamond-frame">
-
-        <header class="header-logo">
-            <img
-                src="./file_000000003744820bb906eade10d0589d.png"
-                alt="MELLOWAY Main Logo">
-        </header>
-
-    </div>
-
+    <header class="logo-container">
+        <img
+            src="./file_000000003744820bb906eade10d0589d.png"
+            alt="MELLOWAY original interlocking M logo">
+    </header>
 </section>
 
-<!-- COLLECTIONS -->
-<section class="collection-section">
-
-    <main class="collections">
-
-        <a href="gold.html" class="collection">
-            <h2>GOLD</h2>
-        </a>
-
-        <a href="silver.html" class="collection">
-            <h2>SILVER</h2>
-        </a>
-
-        <a href="bronze.html" class="collection">
-            <h2>BRONZE</h2>
-        </a>
-
-        <a href="platinum.html" class="collection">
-            <h2>PLATINUM</h2>
-        </a>
-
-        <!-- ONE OF ONE: NOT CLICKABLE -->
-        <div class="one-of-one-display">
-
-            <h2>ONE OF ONE</h2>
-
-            <div class="logo-frame">
-                <img
-                    src="./file_00000000988481fa9fe31c67b67da2cb.jpg"
-                    alt="MELLOWAY Pearl White Digital Logo">
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- DESCRIPTION SPACE -->
-    <section class="description-area">
-        <!-- Your MELLOWAY description will go here -->
-    </section>
-
-    <!-- COPYRIGHT -->
-    <footer class="site-footer">
-        <div class="brand-name">MELLOWAY™</div>
-        <div>© 2026 Cally Jane Melloway. All rights reserved.</div>
-    </footer>
-
-</section>
+<main class="lower-section">
+    <!-- Separate artwork collections will be displayed on their own pages. -->
+</main>
 
 </body>
 </html>
