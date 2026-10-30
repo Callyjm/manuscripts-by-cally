@@ -1,150 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MELLOWAY — GOLD</title>
+<title>MELLOWAY — GOLD</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            background-color: #07152e;
-            background-image:
-                radial-gradient(circle at center, rgba(40, 58, 91, 0.45) 1px, transparent 1.5px);
-            background-size: 280px 280px;
-            color: #f5f6ff;
-            font-family: Georgia, serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+html {
+    min-height: 100%;
+}
 
-        header {
-            padding: 50px 20px 30px;
-        }
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #07152e;
+    color: #f5f6ff;
+    font-family: Georgia, serif;
+    text-align: center;
+}
 
-        h1 {
-            font-size: 48px;
-            letter-spacing: 8px;
-            color: #f5f6ff;
-            margin: 0;
-            font-weight: normal;
-            text-shadow: 0 0 8px rgba(255,255,255,0.25);
-        }
+/* REPEATING MELLOWAY MONOGRAM BACKGROUND */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 
-        .subtitle {
-            font-size: 16px;
-            letter-spacing: 4px;
-            margin-top: 15px;
-            color: #f5f6ff;
-        }
+    background-image:
+        url('./file_000000003744820bb906eade10d0589d.png');
 
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px 20px 60px;
-        }
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: 95px auto;
 
-        .artwork {
-            margin: 10px auto 40px;
-        }
+    opacity: 0.12;
+}
 
-        .artwork img {
-            display: block;
-            width: auto;
-            height: auto;
-            max-width: 100%;
-            max-height: 55vh;
-            object-fit: contain;
-            margin: 0 auto;
-            border: 1px solid #dce0ed;
-            box-sizing: border-box;
-        }
+/* HEADER */
+header {
+    padding: 50px 20px 30px;
+}
 
-        .artwork-title {
-            color: #f5f6ff;
-            font-size: 20px;
-            letter-spacing: 3px;
-            margin-top: 22px;
-        }
+h1 {
+    margin: 0;
+    color: #f5f6ff;
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 8px;
+    text-shadow: 0 0 8px rgba(255,255,255,0.25);
+}
 
-        .back {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 26px;
-            border: 1px solid #cbd0df;
-            color: #f5f6ff;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: background 0.3s ease;
-        }
+.subtitle {
+    margin-top: 15px;
+    color: #f5f6ff;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
 
-        .back:hover {
-            background: rgba(255,255,255,0.10);
-        }
+/* ARTWORK */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 20px 60px;
+}
 
-        footer {
-            padding: 30px 20px;
-            font-size: 13px;
-            letter-spacing: 3px;
-            color: #f5f6ff;
-        }
+.artwork {
+    margin: 10px auto 40px;
+}
 
-        @media (max-width: 600px) {
-            header {
-                padding-top: 40px;
-            }
+.artwork img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 55vh;
+    object-fit: contain;
+    margin: 0 auto;
+    border: 1px solid #dce0ed;
+}
 
-            h1 {
-                font-size: 38px;
-                letter-spacing: 6px;
-            }
+.artwork-title {
+    margin-top: 22px;
+    color: #f5f6ff;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
 
-            .subtitle {
-                font-size: 14px;
-                letter-spacing: 3px;
-            }
+/* BACK LINK */
+.back {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 26px;
+    border: 1px solid #cbd0df;
+    color: #f5f6ff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: background 0.3s ease;
+}
 
-            .artwork img {
-                max-height: 50vh;
-            }
-        }
-    </style>
+.back:hover {
+    background: rgba(255,255,255,0.10);
+}
+
+/* FOOTER */
+footer {
+    padding: 30px 20px;
+    color: #f5f6ff;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header {
+        padding-top: 40px;
+    }
+
+    h1 {
+        font-size: 38px;
+        letter-spacing: 6px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .artwork img {
+        max-height: 50vh;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>GOLD</h1>
-        <div class="subtitle">MELLOWAY — CALLY</div>
-    </header>
+<header>
+    <h1>GOLD</h1>
+    <div class="subtitle">MELLOWAY — CALLY</div>
+</header>
 
-    <main>
+<main>
 
-        <div class="artwork">
-            <img
-                src="IMG_20261014_165031.jpg"
-                alt="Original MELLOWAY Gold Collection artwork"
-            >
+    <div class="artwork">
+        <img
+            src="IMG_20261014_165031.jpg"
+            alt="Original MELLOWAY Gold Collection artwork"
+        >
 
-            <div class="artwork-title">
-                ORIGINAL ARTWORK
-            </div>
+        <div class="artwork-title">
+            ORIGINAL ARTWORK
         </div>
+    </div>
 
-        <a href="index.html#art" class="back">
-            BACK TO ART
-        </a>
+    <a href="index.html#art" class="back">
+        BACK TO ART
+    </a>
 
-    </main>
+</main>
 
-    <footer>
-        MELLOWAY
-    </footer>
+<footer>
+    MELLOWAY
+</footer>
 
 </body>
 </html>
