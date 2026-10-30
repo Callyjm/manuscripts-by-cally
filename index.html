@@ -21,18 +21,16 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: Georgia, serif;
-    background: #07152e;
+    text-align: center;
     color: #e5e4ec;
+    background: #07152e;
 }
 
 /* TOP BRAND AREA */
 .brand-hero {
     width: 100%;
     min-height: 65vh;
-    padding: 35px 18px 45px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    padding: 30px 15px 45px;
     background-color: #07152e;
     background-image: url('./melloway-blue-pattern.jpg');
     background-position: center top;
@@ -45,7 +43,6 @@ body {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .logo-container img {
@@ -55,12 +52,102 @@ body {
     margin: 0 auto;
 }
 
-/* CLEAN SEPARATE LOWER SECTION */
-.lower-section {
+/* SEPARATE ART COLLECTIONS */
+.collection-section {
     width: 100%;
-    min-height: 35vh;
-    padding: 40px 20px;
+    padding: 45px 20px 65px;
     background: #07152e;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 18px;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.collection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75px;
+    padding: 15px 8px;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.collection:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 14px rgba(220, 225, 255, 0.65);
+}
+
+.collection h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.gold h2 {
+    color: #d4af37;
+}
+
+.silver h2 {
+    color: #e0e3ed;
+}
+
+.bronze h2 {
+    color: #cd7f32;
+}
+
+.platinum h2 {
+    color: #f0f1f5;
+}
+
+.one-of-one {
+    grid-column: 1 / -1;
+}
+
+.one-of-one h2 {
+    color: #c58ba0;
+    letter-spacing: 3px;
+}
+
+/* ONE OF ONE BRAND IMAGE */
+.one-of-one-logo {
+    width: 100%;
+    max-width: 360px;
+    margin: 30px auto 0;
+    padding: 14px;
+    background: #050505;
+    border: 2px solid #c5c7ce;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.65);
+}
+
+.one-of-one-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    padding: 25px 15px 30px;
+    color: #c5c7ce;
+    background: #050d1d;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 /* MOBILE DISPLAY */
@@ -71,12 +158,25 @@ body {
         background-size: 220px auto;
     }
 
-    .logo-container {
-        width: 100%;
+    .collection-section {
+        padding: 30px 14px 50px;
     }
 
-    .lower-section {
-        min-height: 45vh;
+    .collections {
+        gap: 16px 10px;
+    }
+
+    .collection {
+        min-height: 65px;
+    }
+
+    .collection h2 {
+        font-size: 16px;
+        letter-spacing: 1.8px;
+    }
+
+    .one-of-one-logo {
+        max-width: 290px;
     }
 }
 
@@ -85,12 +185,17 @@ body {
     html {
         scroll-behavior: auto;
     }
+
+    .collection {
+        transition: none;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- TOP BRAND LOGO -->
 <section class="brand-hero">
     <header class="logo-container">
         <img
@@ -99,9 +204,44 @@ body {
     </header>
 </section>
 
-<main class="lower-section">
-    <!-- Separate artwork collections will be displayed on their own pages. -->
+<!-- ART COLLECTIONS -->
+<main class="collection-section">
+    <div class="collections">
+
+        <a href="gold.html" class="collection gold">
+            <h2>GOLD</h2>
+        </a>
+
+        <a href="silver.html" class="collection silver">
+            <h2>SILVER</h2>
+        </a>
+
+        <a href="bronze.html" class="collection bronze">
+            <h2>BRONZE</h2>
+        </a>
+
+        <a href="platinum.html" class="collection platinum">
+            <h2>PLATINUM</h2>
+        </a>
+
+        <div class="collection one-of-one">
+            <h2>ONE OF ONE</h2>
+        </div>
+
+    </div>
+
+    <div class="one-of-one-logo">
+        <img
+            src="./file_00000000988481fa9fe31c67b67da2cb.jpg"
+            alt="MELLOWAY One of One pearl-white digital logo">
+    </div>
 </main>
+
+<!-- COPYRIGHT FOOTER -->
+<footer>
+    <p>MELLOWAY™</p>
+    <p>© 2026 Cally Jane Melloway. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
