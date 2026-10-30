@@ -11,25 +11,40 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
     margin: 0;
     padding: 0;
-    width: 100%;
-    min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #07152e;
-    background-image: url('./melloway-blue-pattern.jpg');
-    background-position: top center;
-    background-repeat: repeat;
-    background-size: 280px auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #07152e;
     font-family: Georgia, serif;
     text-align: center;
     color: #f5f5ff;
 }
 
-/* MAIN MELLOWAY LOGO */
+/* OPENING BRANDING SCREEN */
+.brand-hero {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #07152e;
+    background-image: url('./melloway-blue-pattern.jpg');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: 280px auto;
+    padding: 0 0 30px;
+}
+
+/* LARGE MELLOWAY LOGO */
 .header-logo {
     width: 100%;
     margin: 0 auto;
@@ -43,22 +58,21 @@ body {
     margin: 0 auto;
 }
 
-/* PAGE CONTENT */
-.pattern-area {
+/* COLLECTION SECTION */
+.collection-section {
     width: 100%;
-    min-height: 100vh;
-    padding: 30px 15px 40px;
-    background: transparent;
+    background-color: #07152e;
+    padding: 65px 15px 35px;
 }
 
-/* COLLECTION LAYOUT */
+/* COLLECTION GRID */
 .collections {
     width: 100%;
     max-width: 680px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px 15px;
+    gap: 30px 15px;
 }
 
 /* CLICKABLE COLLECTIONS */
@@ -86,7 +100,7 @@ body {
 .one-of-one-display {
     grid-column: 1 / -1;
     width: 100%;
-    padding: 30px 10px 40px;
+    padding: 45px 10px 40px;
     text-align: center;
 }
 
@@ -125,7 +139,7 @@ body {
 /* COPYRIGHT FOOTER */
 .site-footer {
     width: 100%;
-    padding: 30px 10px 25px;
+    padding: 35px 10px 25px;
     text-align: center;
     color: #f5f5ff;
     font-size: 13px;
@@ -141,12 +155,12 @@ body {
 
 /* MOBILE DISPLAY */
 @media (max-width: 600px) {
-    body {
+    .brand-hero {
         background-size: 220px auto;
     }
 
-    .pattern-area {
-        padding: 25px 12px 30px;
+    .collection-section {
+        padding: 50px 12px 30px;
     }
 
     .collection h2,
@@ -164,33 +178,34 @@ body {
 
 <body>
 
-<!-- LARGE MELLOWAY LOGO -->
-<header class="header-logo">
-    <img
-        src="./file_000000003744820bb906eade10d0589d.png"
-        alt="MELLOWAY Main Logo">
-</header>
+<!-- FIRST SCREEN: MELLOWAY BRANDING -->
+<section class="brand-hero">
 
-<section class="pattern-area">
+    <header class="header-logo">
+        <img
+            src="./file_000000003744820bb906eade10d0589d.png"
+            alt="MELLOWAY Main Logo">
+    </header>
+
+</section>
+
+<!-- SECOND SECTION: COLLECTIONS -->
+<section class="collection-section">
 
     <main class="collections">
 
-        <!-- GOLD: CLICKABLE -->
         <a href="gold.html" class="collection">
             <h2>GOLD</h2>
         </a>
 
-        <!-- SILVER: CLICKABLE -->
         <a href="silver.html" class="collection">
             <h2>SILVER</h2>
         </a>
 
-        <!-- BRONZE: CLICKABLE -->
         <a href="bronze.html" class="collection">
             <h2>BRONZE</h2>
         </a>
 
-        <!-- PLATINUM: CLICKABLE -->
         <a href="platinum.html" class="collection">
             <h2>PLATINUM</h2>
         </a>
