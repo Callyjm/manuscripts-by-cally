@@ -29,13 +29,7 @@ body {
     color: #f5f5ff;
 }
 
-/* LARGE MELLOWAY LOGO */
-.header-logo {
-    width: 100%;
-    margin: 0 auto;
-    background: transparent;
-}
-
+/* MAIN MELLOWAY LOGO */
 .header-logo img {
     display: block;
     width: 100%;
@@ -44,12 +38,11 @@ body {
     margin: 0 auto;
 }
 
-/* MAIN PAGE CONTENT */
+/* PAGE CONTENT */
 .pattern-area {
     width: 100%;
     min-height: 100vh;
-    padding: 30px 15px 70px;
-    background: transparent;
+    padding: 30px 15px 40px;
 }
 
 /* COLLECTION LAYOUT */
@@ -69,7 +62,6 @@ body {
     justify-content: center;
     min-height: 75px;
     text-decoration: none;
-    background: transparent;
 }
 
 /* PLATINUM WHITE HEADINGS */
@@ -83,7 +75,7 @@ body {
     text-shadow: 0 2px 8px rgba(0,0,0,0.65);
 }
 
-/* ONE OF ONE IS A STATIC DISPLAY */
+/* ONE OF ONE DISPLAY */
 .one-of-one-display {
     grid-column: 1 / -1;
     width: 100%;
@@ -91,13 +83,44 @@ body {
     text-align: center;
 }
 
-/* PEARL WHITE DIGITAL LOGO */
+/* FRAMED PEARL WHITE DIGITAL LOGO */
 .one-of-one-display img {
     display: block;
     width: 100%;
     max-width: 420px;
     height: auto;
+    margin: 25px auto;
+    border: 8px solid #080808;
+    outline: 2px solid #c0c0c0;
+    outline-offset: 3px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.65);
+}
+
+/* DESCRIPTION SPACE */
+.description-area {
+    max-width: 680px;
     margin: 20px auto;
+    padding: 20px 15px;
+    color: #f5f5ff;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* COPYRIGHT FOOTER */
+.site-footer {
+    width: 100%;
+    padding: 30px 10px 25px;
+    text-align: center;
+    color: #f5f5ff;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.site-footer .brand-name {
+    font-size: 16px;
+    letter-spacing: 3px;
 }
 
 @media (max-width: 600px) {
@@ -106,13 +129,17 @@ body {
     }
 
     .pattern-area {
-        padding: 25px 12px 60px;
+        padding: 25px 12px 30px;
     }
 
     .collection h2,
     .one-of-one-display h2 {
         font-size: 16px;
         letter-spacing: 2px;
+    }
+
+    .one-of-one-display img {
+        border-width: 6px;
     }
 }
 </style>
@@ -146,7 +173,7 @@ body {
             <h2>PLATINUM</h2>
         </a>
 
-        <!-- NOT CLICKABLE: DIGITAL ART DISPLAY -->
+        <!-- ONE OF ONE: STATIC DISPLAY -->
         <div class="one-of-one-display">
             <h2>ONE OF ONE</h2>
 
@@ -156,6 +183,18 @@ body {
         </div>
 
     </main>
+
+    <!-- DESCRIPTION WILL GO HERE -->
+
+    <section class="description-area">
+        <!-- We will add your description here -->
+    </section>
+
+    <!-- COPYRIGHT FOOTER -->
+    <footer class="site-footer">
+        <div class="brand-name">MELLOWAY™</div>
+        <div>© 2026 Cally Jane Melloway. All rights reserved.</div>
+    </footer>
 
 </section>
 
