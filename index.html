@@ -25,13 +25,13 @@ body {
     text-align: center;
     color: #e5e4ec;
     background-color: #07152e;
-    background-image: url('./melloway-blue-pattern.jpg?v=2');
+    background-image: url('./melloway-blue-pattern.jpg');
     background-position: center top;
     background-size: 100% auto;
     background-repeat: repeat-y;
 }
 
-/* MELLOWAY ORIGINAL LARGE LOGO */
+/* MELLOWAY ORIGINAL LOGO */
 header {
     width: 100%;
     max-width: 1024px;
@@ -44,17 +44,16 @@ header img {
     height: auto;
 }
 
-/* COLLECTIONS */
+/* ART COLLECTIONS */
 main {
-    position: relative;
     width: 100%;
-    padding: 25px 20px 70px;
+    padding: 35px 20px 80px;
 }
 
 .collections {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 25px 18px;
     width: 100%;
     max-width: 680px;
     margin: 0 auto;
@@ -64,19 +63,17 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 105px;
-    padding: 24px 12px;
-    background: rgba(5, 18, 43, 0.55);
+    min-height: 75px;
+    padding: 15px 8px;
+    background: transparent;
     border: none;
-    border-radius: 3px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .collection:hover {
-    background: rgba(30, 57, 95, 0.75);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    text-shadow: 0 0 14px rgba(220, 225, 255, 0.65);
 }
 
 .collection h2 {
@@ -84,6 +81,7 @@ main {
     font-size: 21px;
     font-weight: normal;
     letter-spacing: 3px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .gold h2 {
@@ -91,7 +89,7 @@ main {
 }
 
 .silver h2 {
-    color: #c0c0c0;
+    color: #e0e3ed;
 }
 
 .bronze h2 {
@@ -99,19 +97,16 @@ main {
 }
 
 .platinum h2 {
-    color: #e1e5ec;
-}
-
-.one-of-one h2 {
-    color: #b66a83;
-    letter-spacing: 2px;
+    color: #f0f1f5;
 }
 
 .one-of-one {
     grid-column: 1 / -1;
-    width: calc(50% - 9px);
-    justify-self: center;
-    min-height: 90px;
+}
+
+.one-of-one h2 {
+    color: #c58ba0;
+    letter-spacing: 3px;
 }
 
 /* MOBILE DISPLAY */
@@ -121,25 +116,20 @@ main {
     }
 
     main {
-        padding: 18px 14px 45px;
+        padding: 22px 14px 55px;
     }
 
     .collections {
-        gap: 12px;
+        gap: 16px 10px;
     }
 
     .collection {
-        min-height: 88px;
-        padding: 18px 8px;
+        min-height: 65px;
     }
 
     .collection h2 {
         font-size: 16px;
-        letter-spacing: 1.5px;
-    }
-
-    .one-of-one {
-        min-height: 78px;
+        letter-spacing: 1.8px;
     }
 }
 
@@ -160,9 +150,8 @@ main {
 
 <header aria-label="MELLOWAY brand logo">
     <img
-        src="./melloway-blue-header.jpg?v=2"
-        alt="MELLOWAY original interlocking M X logo"
-    >
+        src="./file_000000003744820bb906eade10d0589d.png"
+        alt="MELLOWAY original interlocking M X logo">
 </header>
 
 <main>
