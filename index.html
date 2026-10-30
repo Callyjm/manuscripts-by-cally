@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MELLOWAY</title>
-<meta name="description" content="MELLOWAY — original art and exclusive creative works.">
+<title>MELLOWAY — The House of Luxury</title>
+<meta name="description" content="MELLOWAY — The House of Luxury. Art, design and exclusive original creations.">
 
 <style>
 * {
@@ -53,6 +53,59 @@ body {
     margin: 0 auto;
 }
 
+/* LUXURY BRAND SIGNATURE */
+.brand-signature {
+    width: 100%;
+    max-width: 500px;
+    margin: 18px auto 0;
+    padding: 0 12px;
+    color: #f5f6ff;
+}
+
+.brand-tagline {
+    margin: 0 0 9px;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: #f5f6ff;
+    text-shadow: 0 0 7px rgba(255,255,255,0.35);
+}
+
+.brand-description {
+    margin: 0 0 22px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #e1e3ed;
+}
+
+.por-heading {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #f5f6ff;
+}
+
+.por-description {
+    margin: 0 0 6px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #d7d9e4;
+}
+
+.brand-email {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #f5f6ff;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.brand-email:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
 /* ART COLLECTIONS */
 .collection-section {
     width: 100%;
@@ -83,7 +136,7 @@ body {
 
 .collection:hover {
     transform: translateY(-3px);
-    text-shadow: 0 0 14px rgba(240, 243, 255, 0.8);
+    text-shadow: 0 0 14px rgba(240,243,255,0.8);
 }
 
 /* BRIGHT PLATINUM-WHITE HEADINGS */
@@ -94,8 +147,8 @@ body {
     letter-spacing: 3px;
     color: #f5f6ff;
     text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.55),
-        0 2px 8px rgba(0, 0, 0, 0.45);
+        0 0 5px rgba(255,255,255,0.55),
+        0 2px 8px rgba(0,0,0,0.45);
 }
 
 /* ONE OF ONE */
@@ -116,7 +169,7 @@ body {
     padding: 14px;
     background: #050505;
     border: 2px solid #c5c7ce;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.65);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.65);
 }
 
 .one-of-one-logo img {
@@ -142,10 +195,39 @@ footer p {
 
 /* MOBILE DISPLAY */
 @media (max-width: 600px) {
+
     .brand-hero {
         min-height: 55vh;
         padding: 22px 12px 75px;
         background-size: 220px auto;
+    }
+
+    .brand-signature {
+        margin-top: 14px;
+    }
+
+    .brand-tagline {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .brand-description {
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+
+    .por-heading {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .por-description {
+        font-size: 9px;
+    }
+
+    .brand-email {
+        font-size: 10px;
     }
 
     .collection-section {
@@ -187,15 +269,45 @@ footer p {
 
 <!-- TOP BRAND LOGO -->
 <section class="brand-hero">
+
     <header class="logo-container">
         <img
             src="./file_000000003744820bb906eade10d0589d.png"
             alt="MELLOWAY original interlocking M logo">
     </header>
+
+    <!-- MELLOWAY LUXURY BRAND IDENTITY -->
+    <div class="brand-signature">
+
+        <h2 class="brand-tagline">
+            THE HOUSE OF LUXURY
+        </h2>
+
+        <p class="brand-description">
+            ART • DESIGN • EXCLUSIVITY
+        </p>
+
+        <h3 class="por-heading">
+            PRICE ON REQUEST (POR)
+        </h3>
+
+        <p class="por-description">
+            Enquiries &amp; private pricing
+        </p>
+
+        <a
+            class="brand-email"
+            href="mailto:Callymelloway@gmail.com">
+            Callymelloway@gmail.com
+        </a>
+
+    </div>
+
 </section>
 
 <!-- ART COLLECTIONS -->
 <main class="collection-section">
+
     <div class="collections">
 
         <a href="gold.html" class="collection gold">
@@ -225,6 +337,7 @@ footer p {
             src="./file_00000000988481fa9fe31c67b67da2cb.jpg"
             alt="MELLOWAY One of One pearl-white digital logo">
     </div>
+
 </main>
 
 <!-- COPYRIGHT FOOTER -->
