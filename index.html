@@ -30,6 +30,11 @@ body {
 }
 
 /* MAIN MELLOWAY LOGO */
+.header-logo {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .header-logo img {
     display: block;
     width: 100%;
@@ -43,6 +48,7 @@ body {
     width: 100%;
     min-height: 100vh;
     padding: 30px 15px 40px;
+    background: transparent;
 }
 
 /* COLLECTION LAYOUT */
@@ -62,9 +68,10 @@ body {
     justify-content: center;
     min-height: 75px;
     text-decoration: none;
+    background: transparent;
 }
 
-/* PLATINUM WHITE HEADINGS */
+/* COLLECTION HEADINGS */
 .collection h2,
 .one-of-one-display h2 {
     margin: 0;
@@ -83,21 +90,30 @@ body {
     text-align: center;
 }
 
-/* FRAMED PEARL WHITE DIGITAL LOGO */
-.one-of-one-display img {
+/* THICK BLACK LOGO FRAME */
+.logo-frame {
+    display: inline-block;
+    width: 100%;
+    max-width: 450px;
+    padding: 14px;
+    margin: 25px auto;
+    background-color: #000000;
+    border: 2px solid #c0c0c0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+}
+
+/* LOGO INSIDE FRAME */
+.logo-frame img {
     display: block;
     width: 100%;
-    max-width: 420px;
     height: auto;
-    margin: 25px auto;
-    border: 8px solid #080808;
-    outline: 2px solid #c0c0c0;
-    outline-offset: 3px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.65);
+    margin: 0;
+    border: none;
 }
 
 /* DESCRIPTION SPACE */
 .description-area {
+    width: 100%;
     max-width: 680px;
     margin: 20px auto;
     padding: 20px 15px;
@@ -123,6 +139,7 @@ body {
     letter-spacing: 3px;
 }
 
+/* MOBILE DISPLAY */
 @media (max-width: 600px) {
     body {
         background-size: 220px auto;
@@ -138,8 +155,8 @@ body {
         letter-spacing: 2px;
     }
 
-    .one-of-one-display img {
-        border-width: 6px;
+    .logo-frame {
+        padding: 10px;
     }
 }
 </style>
@@ -147,6 +164,7 @@ body {
 
 <body>
 
+<!-- LARGE MELLOWAY LOGO -->
 <header class="header-logo">
     <img
         src="./file_000000003744820bb906eade10d0589d.png"
@@ -157,37 +175,44 @@ body {
 
     <main class="collections">
 
+        <!-- GOLD: CLICKABLE -->
         <a href="gold.html" class="collection">
             <h2>GOLD</h2>
         </a>
 
+        <!-- SILVER: CLICKABLE -->
         <a href="silver.html" class="collection">
             <h2>SILVER</h2>
         </a>
 
+        <!-- BRONZE: CLICKABLE -->
         <a href="bronze.html" class="collection">
             <h2>BRONZE</h2>
         </a>
 
+        <!-- PLATINUM: CLICKABLE -->
         <a href="platinum.html" class="collection">
             <h2>PLATINUM</h2>
         </a>
 
-        <!-- ONE OF ONE: STATIC DISPLAY -->
+        <!-- ONE OF ONE: NOT CLICKABLE -->
         <div class="one-of-one-display">
+
             <h2>ONE OF ONE</h2>
 
-            <img
-                src="./file_00000000988481fa9fe31c67b67da2cb.jpg"
-                alt="MELLOWAY Pearl White Digital Logo">
+            <div class="logo-frame">
+                <img
+                    src="./file_00000000988481fa9fe31c67b67da2cb.jpg"
+                    alt="MELLOWAY Pearl White Digital Logo">
+            </div>
+
         </div>
 
     </main>
 
-    <!-- DESCRIPTION WILL GO HERE -->
-
+    <!-- DESCRIPTION TO BE ADDED HERE -->
     <section class="description-area">
-        <!-- We will add your description here -->
+        <!-- Your MELLOWAY description will go here -->
     </section>
 
     <!-- COPYRIGHT FOOTER -->
