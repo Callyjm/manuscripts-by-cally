@@ -1,6 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MELLOWAY — One of One</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MELLOWAY</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: #07152e;
+    font-family: Georgia, serif;
+    text-align: center;
+    color: #f5f5ff;
+}
+
+/* MAIN MELLOWAY LOGO */
+.header-logo {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-logo img {
+    display: block;
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* REPEATING BLUE PEARL BACKGROUND */
+.pattern-area {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./melloway-blue-pattern.jpg');
+    background-position: top center;
+    background-repeat: repeat;
+    background-size: 280px auto;
+    padding: 30px 15px 80px;
+}
+
+/* COLLECTION LAYOUT */
+.collections {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 15px;
+}
+
+/* CLICKABLE COLLECTIONS */
+.collection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75px;
+    text-decoration: none;
+    background: transparent;
+}
+
+/* ALL COLLECTION HEADINGS IN PLATINUM WHITE */
+.collection h2,
+.one-of-one-display h2 {
+    margin: 0;
+    color: #f5f5ff;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+}
+
+/* ONE OF ONE: STATIC DISPLAY, NOT A LINK */
+.one-of-one-display {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 25px 10px 40px;
+    text-align: center;
+}
+
+/* PEARL WHITE DIGITAL MELLOWAY LOGO */
+.one-of-one-display img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* MOBILE DISPLAY */
+@media (max-width: 600px) {
+    .pattern-area {
+        background-size: 220px auto;
+        padding: 25px 12px 60px;
+    }
+
+    .collection h2,
+    .one-of-one-display h2 {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LARGE MELLOWAY LOGO AT THE TOP -->
+<header class="header-logo">
+    <img
+        src="./file_00000000374481fa9fe31c67b67da2cb.jpg"
+        alt="MELLOWAY Main Logo">
+</header>
+
+<section class="pattern-area">
+
+    <main class="collections">
+
+        <!-- GOLD: CLICKABLE -->
+        <a href="gold.html" class="collection">
+            <h2>GOLD</h2>
+        </a>
+
+        <!-- SILVER: CLICKABLE -->
+        <a href="silver.html" class="collection">
+            <h2>SILVER</h2>
+        </a>
+
+        <!-- BRONZE: CLICKABLE -->
+        <a href="bronze.html" class="collection">
+            <h2>BRONZE</h2>
+        </a>
+
+        <!-- PLATINUM: CLICKABLE -->
+        <a href="platinum.html" class="collection">
+            <h2>PLATINUM</h2>
+        </a>
+
+        <!-- ONE OF ONE: NOT CLICKABLE -->
+        <div class="one-of-one-display">
+
+            <h2>ONE OF ONE</h2>
+
+            <img
+                src="./file_00000000988481fa9fe31c67b67da2cb.jpg"
+                alt="MELLOWAY Pearl White Digital Logo">
+
+        </div>
+
+    </main>
+
+</section>
+
+</body>
+</html>
